@@ -3,12 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu primeiro site</title>
-</head>
-<body>
-    <h1>Fala Galera!!</h1>
-    <p>Esse é meu site criado no VS Code.</p>
-    
-</body>
+    <title>Meu Site Responsivo</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: white;
+        }
+
+        .container {
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔥 Site Responsivo 🔥</h1>
+        <p>Agora ele funciona no celular 😎</p>
+    </div>
+</body>
 </html>

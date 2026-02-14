@@ -1,74 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Responsivo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spectro Negro</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #1f1c2c, #928dab);
-            color: white;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0d0000, #000000);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
 
-        .container {
-            padding: 40px 20px;
-        }
+/* Fundo animado discreto */
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%);
+    animation: moveBg 15s linear infinite;
+    z-index: -1;
+}
 
-        h1 {
-            font-size: 42px;
-        }
+@keyframes moveBg {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(10%,10%); }
+    100% { transform: translate(0,0); }
+}
 
-        p {
-            font-size: 20px;
-        }
+header {
+    padding: 60px 20px 40px;
+}
 
-        /* BOTÃO */
-        .botao {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: #ff4b2b;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 18px;
-            transition: 0.3s;
-        }
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+}
 
-        .botao:hover {
-            background: #ff416c;
-            transform: scale(1.1);
-        }
+h1 {
+    margin-top: 20px;
+    font-size: 42px;
+    letter-spacing: 3px;
+    color: #ff2a2a;
+}
 
-        /* RESPONSIVO */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 28px;
-            }
+.subtitulo {
+    font-size: 18px;
+    opacity: 0.8;
+}
 
-            p {
-                font-size: 16px;
-            }
+.section {
+    padding: 50px 20px;
+}
 
-            .container {
-                padding: 20px;
-            }
-        }
-    </style>
+h2 {
+    color: #ff2a2a;
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 90%;
+    max-width: 900px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255,0,0,0.6);
+}
+
+/* Cards de vídeos */
+.videos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    border-radius: 15px;
+    padding: 15px;
+    width: 280px;
+    box-shadow: 0 0 15px rgba(255,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Botões sociais */
+.social a {
+    display: inline-block;
+    margin: 10px;
+    padding: 14px 30px;
+    background: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.social a:hover {
+    background: #990000;
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 28px; }
+    iframe { height: 220px; }
+}
+</style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>🔥 Site Responsivo 🔥</h1>
-        <p>Agora ele funciona no celular 😎</p>
 
-        <a href="https://www.instagram.com" target="_blank" class="botao">
-            Visitar Instagram
-        </a>
+<header>
+    <img src="https://linksharing.samsungcloud.com/sp3k7wc6A1MR" class="avatar">
+    <h1>SPECTRO NEGRO</h1>
+    <p class="subtitulo">Gameplays • Highlights • Competitivo</p>
+</header>
+
+<section class="section">
+    <h2>Sobre o Canal</h2>
+    <p>Conteúdo focado em partidas intensas, jogadas insanas e momentos épicos do mundo gamer.</p>
+</section>
+
+<section class="section">
+    <h2>Vídeo em Destaque</h2>
+    <iframe src="https://www.youtube.com/embed/M3JUufJUfm4" allowfullscreen></iframe>
+</section>
+
+<section class="section">
+    <h2>Últimos Vídeos</h2>
+    <div class="videos">
+        <div class="card">
+            <img src="https://via.placeholder.com/280x160">
+            <p>Clutch Insano 🔥</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/280x160">
+            <p>Rankeada Tensa ⚔</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/280x160">
+            <p>Momento Épico 💀</p>
+        </div>
     </div>
+</section>
+
+<section class="section social">
+    <h2>Conecte-se Comigo</h2>
+
+    <a href="https://www.youtube.com/@Spectro_Negro" target="_blank">
+        🎥 Acesse meu canal no YouTube
+    </a>
+
+    <a href="https://www.instagram.com/spectro_negro?igsh=YzVqaWhwb3dyMXV5" target="_blank">
+        📸 Acesse meu Instagram
+    </a>
+</section>
+
+<footer>
+    © 2026 Spectro Negro - Todos os direitos reservados.
+</footer>
+
 </body>
 </html>
